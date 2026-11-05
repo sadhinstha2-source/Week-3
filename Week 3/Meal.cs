@@ -14,5 +14,10 @@ namespace Week_3
 		{
 			Console.WriteLine($"Meal: {Name} - £{Price:F2}");
 		}
+		public override double CalculateTotal(int quantity)
+		{
+			double total = Price * quantity * 1.10;   // 10% tax
+			return Math.Round(total, 2, MidpointRounding.AwayFromZero);
+		}
 	}
 }

@@ -17,5 +17,10 @@ namespace Week_3
 		{
 			Console.WriteLine($"Drink: {Name} ({SizeMl}ml) - £{Price:F2}");
 		}
+		public override double CalculateTotal(int quantity)
+		{
+			double total = Price * quantity * 1.05;   // 5% tax
+			return Math.Round(total, 2, MidpointRounding.AwayFromZero);
+		}
 	}
 }

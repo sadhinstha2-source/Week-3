@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Week_3
 {
-	public class MenuItem
+	public abstract class MenuItem
 	{
 		public string Name{  get; set; }
 		public double Price { get; set; }
@@ -18,6 +18,7 @@ namespace Week_3
 		{
 			Console.WriteLine($"{Name} - £{Price:F2}");
 		}
+		public abstract double CalculateTotal(int quality)
 
 	}
 }
